@@ -48,7 +48,8 @@
               </ngx-datatable-column>
               <ngx-datatable-column name="Actions">
                 <ng-template ngx-datatable-cell-template let-value="value" let-rowIndex="rowIndex" let-row="row">
-                  <mat-icon class="icon edit-icon" color="primary" (click)="updateValue(rowIndex)">edit</mat-icon>
+                  <mat-icon *ngIf="editing[rowIndex + '-title'] || editing[rowIndex + '-description']"
+                    class="icon edit-icon" color="primary" (click)="updateValue(rowIndex)">edit</mat-icon>
                   <mat-icon class="icon" color="warn" (click)="deleteTask(rowIndex)">delete</mat-icon>
                 </ng-template>
               </ngx-datatable-column>
