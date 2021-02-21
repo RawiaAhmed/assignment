@@ -1,0 +1,75 @@
+$light-grey: rgba(0, 0, 0, 0.12);
+
+.todo-container {
+    height: 100%;
+    background-color: #e6e6e6;
+}
+
+.header,
+.footer {
+    height: 50px;
+    background-color: white;
+    line-height: 50px;
+    padding: 0 50px;
+}
+
+.header {
+    border-bottom: 1px solid $light-grey;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+
+.footer {
+    border-top: 1px solid $light-grey;
+}
+
+.content {
+    padding: 20px;
+}
+
+.sidenav-container {
+    height: calc(100% - 102px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.side-item {
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background: #673ab7;
+    color: white;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.edit-icon {
+    margin-right: 10px;
+}
+
+::ng-deep {
+    .datatable-body-cell-label input {
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid $light-grey;
+        height: 35px;
+    }
+
+    .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+        line-height: 30px;
+    }
+
+    .ngx-datatable.material {
+        box-shadow: 0 0px 0px 0px rgb(0 0 0 / 20%), 0 2px 4px -1px rgb(0 0 0 / 14%), 0 3px 7px 2px rgb(0 0 0 / 12%);
+    }
+
+    .mat-drawer-container {
+        background: #edf0f5;
+    }
+}
