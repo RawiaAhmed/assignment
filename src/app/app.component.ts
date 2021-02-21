@@ -62,11 +62,13 @@ export class AppComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.tasks.push({
+      const tempArr = [...this.tasks];
+      tempArr.push({
         id: this.tasks.length,
         title: result.title,
         description: result.description
       });
+      this.tasks = [...tempArr];
       this.cd.detectChanges();
       this.snackBar.open('Added Successfully !', 'Ok', {
         duration: 3000,
@@ -81,7 +83,9 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.tasks.splice(0, this.tasks.length);
+        const tempArr = [...this.tasks];
+        tempArr.splice(index, 1);
+        this.tasks = [...tempArr];
         this.cd.detectChanges();
         this.snackBar.open('Deleted Successfully !', 'Ok', {
           duration: 3000,
